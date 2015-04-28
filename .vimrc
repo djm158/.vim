@@ -5,11 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'altercatin/vim-colors-solarized'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'gertjanreynaert/cobalt2-vim-theme'
 Plugin 'morhetz/gruvbox'
-Plugin 'junegunn/seoul256.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scroolose/nerdtree'
 Plugin 'mattn/emmet-vim'
