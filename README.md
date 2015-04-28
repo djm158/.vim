@@ -7,8 +7,8 @@ git clone https://github.com/djm158/.vim.git
 
 ## Configure plugins
 
-git submodule init <PLUGIN-NAME>
-git submodule update
+# git submodule init <PLUGIN-NAME>
+# git submodule update
 
 ## TODO
 
