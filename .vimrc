@@ -20,13 +20,14 @@ filetype plugin indent on
 
 syntax on
 
+"necessary for 256 colorscheme
+set t_Co=256           
+
 "colorscheme
-set t_Co=256
-"set t_AB=^[[48;5;%dm
-"set t_AF=^[[38;5;%dm
 set background=dark
 colorscheme gruvbox
 
+"set line numbers visible
 set number
 
 "tab sizing
@@ -35,4 +36,6 @@ set shiftwidth=4
 set softtabstop=4
 set smarttab
 set expandtab
+
+"maps ctrl-p to open chromium browser, useful for quick html doc views
 nnoremap <C-p> :!chromium-browser %<CR>
