@@ -1,5 +1,5 @@
 # .vim
-My personal vim configurations plugins
+My personal vim configurations and plugins
 
 ## Installation
 
