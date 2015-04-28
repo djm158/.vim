@@ -3,16 +3,16 @@
 	url = https://github.com/gmarik/Vundle.vim.git
 [submodule "bundle/vim-javascript-syntax"]
 	path = bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax.git
+	url = https://github.com/jelera/vim-javascript-syntax
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox.git
+	url = https://github.com/morhetz/gruvbox
 [submodule "bundle/vim-cpp-enhanced-highlight"]
 	path = bundle/vim-cpp-enhanced-highlight
-	url = https://github.com/vim-cpp-enhanced-highlight.git
+	url = https://github.com/vim-cpp-enhanced-highlight
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree
