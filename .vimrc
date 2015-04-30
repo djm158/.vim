@@ -11,6 +11,8 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scroolose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-markdown'
 call vundle#end()
 
 "custom keymappings
@@ -36,6 +38,22 @@ set shiftwidth=4
 set softtabstop=4
 set smarttab
 set expandtab
+set autoindent
+set smartindent
 
 "maps ctrl-p to open chromium browser, useful for quick html doc views
 nnoremap <C-p> :!chromium-browser %<CR>
+
+"emmet settings
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+"syntastic defaults
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
