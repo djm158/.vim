@@ -25,3 +25,9 @@
 [submodule "bundle/emmet-vim"]
     path = bundle/emmet-vim
     url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "bundle/vim-livedown"]
+	path = bundle/vim-livedown
+	url = https://github.com/shime/vim-livedown

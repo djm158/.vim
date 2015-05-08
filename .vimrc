@@ -13,6 +13,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-markdown'
+Plugin 'shime/vim-livedown'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 "custom keymappings
@@ -57,3 +59,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"autocompletion features
+set completeopt=longest,menuone
