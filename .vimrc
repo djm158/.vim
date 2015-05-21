@@ -14,7 +14,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-markdown'
 Plugin 'shime/vim-livedown'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 "custom keymappings
