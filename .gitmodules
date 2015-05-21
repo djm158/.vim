@@ -31,3 +31,9 @@
 [submodule "bundle/vim-livedown"]
 	path = bundle/vim-livedown
 	url = https://github.com/shime/vim-livedown
+[submodule "bundle/bundle/erics_vim_syntax_and_color_highlighting"]
+	path = bundle/bundle/erics_vim_syntax_and_color_highlighting
+	url = http://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting
+[submodule "bundle/bundle/vim-colorschemes"]
+	path = bundle/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
