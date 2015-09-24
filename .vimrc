@@ -11,6 +11,7 @@ Plugin 'scroolose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 "custom keymappings
