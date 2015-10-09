@@ -17,6 +17,7 @@ Plugin 'scrooloose/syntastic'
 "lugin 'sentientmachine/erics_vim_syntax_and_color_highlighting'
 "Plugin 'flazz/vim-colorschemes'
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 "custom keymappings
@@ -45,8 +46,7 @@ set expandtab
 set autoindent
 set smartindent
 
-"maps ctrl-p to open chromium browser, useful for quick html doc views
-nnoremap <C-p> :!chromium-browser %<CR>
+"nnoremap <space> za
 
 "emmet settings
 let g:user_emmet_install_global = 0

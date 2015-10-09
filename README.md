@@ -9,7 +9,7 @@ git clone https://github.com/djm158/.vim.git
 
 ln -s ~/.vim/.vimrc ~/.vimrc
 
-ln -s ~/.vim/.gvimrc ~/.gvimrc
+cd ~/.vim
 
 git submodule init <PLUGIN-NAME>
 
