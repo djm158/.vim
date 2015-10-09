@@ -5,18 +5,24 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+<<<<<<< HEAD
 "Plugin 'jelera/vim-javascript-syntax'
+=======
+>>>>>>> addd481b936db0b0679ab30da76b13381bd5a26c
 Plugin 'morhetz/gruvbox'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scroolose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
+<<<<<<< HEAD
 "Plugin 'tpope/vim-markdown'
 "Plugin 'shime/vim-livedown'
 "lugin 'sentientmachine/erics_vim_syntax_and_color_highlighting'
 "Plugin 'flazz/vim-colorschemes'
 "Plugin 'Valloric/YouCompleteMe'
+=======
+>>>>>>> addd481b936db0b0679ab30da76b13381bd5a26c
 Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
