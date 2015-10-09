@@ -22,3 +22,6 @@
 [submodule "bundle/rust.vim"]
 	path = bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "bundle/bundle/vim-cpp-enhanced-highlight"]
+	path = bundle/bundle/syntax
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
