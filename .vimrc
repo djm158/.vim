@@ -57,6 +57,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
+let g:syntastic_cpp_compiler_options = ' -std=c++11 stdlib=libc++'
 
 "autocompletion features
 set completeopt=longest,menuone
