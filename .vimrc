@@ -12,6 +12,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
+Plugin 'Chiel92/vim-autoformat'
 call vundle#end()
 
 "custom keymappings
