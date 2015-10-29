@@ -13,6 +13,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 "custom keymappings
@@ -32,8 +33,7 @@ colorscheme gruvbox
 "set line numbers visible
 set number
 
-"tab sizing
-set tabstop=4
+"tab sizing set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set smarttab
@@ -59,6 +59,8 @@ let g:syntastic_check_on_wq = 0
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let g:syntastic_cpp_compiler_options = ' -std=c++11 stdlib=libc++'
+let g:syntastic_disabled_filetypes=['sh', 'bash', 'shell']
+let g:syntastic_quiet_messages = { 'regex': 'SC2086\|SC2140\|SC2087' }
 
 "autocompletion features
 set completeopt=longest,menuone
