@@ -1,42 +1,42 @@
 [submodule "bundle/Vundle.vim"]
-	path = bundle/Vundle.vim
-	url = https://github.com/gmarik/Vundle.vim.git
+    path = bundle/Vundle.vim
+    url = https://github.com/gmarik/Vundle.vim.git
 [submodule "bundle/gruvbox"]
-	path = bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox.git
+    path = bundle/gruvbox
+    url = https://github.com/morhetz/gruvbox.git
 [submodule "bundle/vim-cpp-enhanced-highlight"]
-	path = bundle/vim-cpp-enhanced-highlight
-	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+    path = bundle/vim-cpp-enhanced-highlight
+    url = https://github.com/octol/vim-cpp-enhanced-highlight.git
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
+    path = bundle/nerdcommenter
+    url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+    path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
+    path = bundle/syntastic
+    url = https://github.com/scrooloose/syntastic
 [submodule "bundle/emmet-vim"]
     path = bundle/emmet-vim
     url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/rust.vim"]
-	path = bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim
+    path = bundle/rust.vim
+    url = https://github.com/rust-lang/rust.vim
 [submodule "bundle/bundle/snytax"]
-	path = bundle/bundle/syntax
-	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+    path = bundle/bundle/syntax
+    url = https://github.com/octol/vim-cpp-enhanced-highlight.git
 [submodule "bundle/vim-autoformat"]
-	path = bundle/vim-autoformat
-	url = https://github.com/Chiel92/vim-autoformat
+    path = bundle/vim-autoformat
+    url = https://github.com/Chiel92/vim-autoformat
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
+    path = bundle/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/vim-javascript-syntax"]
-	path = bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax
+    path = bundle/vim-javascript-syntax
+    url = https://github.com/jelera/vim-javascript-syntax
 [submodule "bundle/vim-colorschemes"]
-	path = bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes
+    path = bundle/vim-colorschemes
+    url = https://github.com/flazz/vim-colorschemes
 [submodule "bundle/csapprox"]
-	path = bundle/csapprox
-	url = https://github.com/godlygeek/csapprox
+    path = bundle/csapprox
+    url = https://github.com/godlygeek/csapprox
