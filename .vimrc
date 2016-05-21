@@ -14,6 +14,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tpope/vim-fugitive'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'godlygeek/csapprox'
+Plugin 'jelera/vim-javascript-syntax'
 call vundle#end()
 
 "custom keymappings
@@ -28,7 +31,8 @@ set t_Co=256
 
 "colorscheme
 set background=dark
-colorscheme gruvbox
+colorscheme badwolf
+"colorscheme railscasts
 
 "set line numbers visible
 set number
@@ -61,6 +65,8 @@ let g:cpp_experimental_template_highlight = 1
 let g:syntastic_cpp_compiler_options = ' -std=c++11 stdlib=libc++'
 let g:syntastic_disabled_filetypes=['sh', 'bash', 'shell']
 let g:syntastic_quiet_messages = { 'regex': 'SC2086\|SC2140\|SC2087' }
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:syntastic_loc_list_height = 3
 
 "autocompletion features
 set completeopt=longest,menuone
