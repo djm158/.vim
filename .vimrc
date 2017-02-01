@@ -31,7 +31,7 @@ set t_Co=256
 
 "colorscheme
 set background=dark
-colorscheme badwolf
+colorscheme gruvbox
 "colorscheme railscasts
 
 "set line numbers visible
@@ -70,3 +70,6 @@ let g:syntastic_loc_list_height = 3
 
 "autocompletion features
 set completeopt=longest,menuone
+
+"set html spaces to 2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
