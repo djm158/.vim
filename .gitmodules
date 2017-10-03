@@ -37,3 +37,6 @@
 [submodule "bundle/csapprox"]
     path = bundle/csapprox
     url = https://github.com/godlygeek/csapprox
+[submodule "bundle/vim-prettier"]
+    path = bundle/vim-prettier
+    url = https://github.com/prettier/vim-prettier
