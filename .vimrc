@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/csapprox'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'prettier/vim-prettier'
 call vundle#end()
 
 "custom keymappings
