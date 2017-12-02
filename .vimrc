@@ -22,6 +22,8 @@ call vundle#end()
 
 "custom keymappings
 inoremap jk <ESC>
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
 
 filetype plugin indent on
 
