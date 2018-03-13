@@ -21,9 +21,15 @@ Plugin 'prettier/vim-prettier'
 call vundle#end()
 
 "custom keymappings
+"easier escape
 inoremap jk <ESC>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+"easier window switching
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 filetype plugin indent on
 
