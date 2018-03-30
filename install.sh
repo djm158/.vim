@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 ln -s ~/.vim/.vimrc ~/.vimrc
 cd ~/.vim
