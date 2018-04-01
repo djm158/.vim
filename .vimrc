@@ -18,6 +18,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/csapprox'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'prettier/vim-prettier'
+Plugin 'jalvesaq/Nvim-R'
 call vundle#end()
 
 "custom keymappings
@@ -82,7 +83,8 @@ let g:NERDSpaceDelims = 1 "add space before comments
 set completeopt=longest,menuone
 
 "set html spaces to 2
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType r setlocal ts=2 sts=2 sw=2
 
 set term=screen-256color
 set t_ut=
