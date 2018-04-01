@@ -78,6 +78,7 @@ let g:syntastic_quiet_messages = { 'regex': 'SC2086\|SC2140\|SC2087' }
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_loc_list_height = 3
 let g:NERDSpaceDelims = 1 "add space before comments
+let R_assign = 0
 
 "autocompletion features
 set completeopt=longest,menuone
