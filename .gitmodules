@@ -40,3 +40,6 @@
 [submodule "bundle/vim-prettier"]
     path = bundle/vim-prettier
     url = https://github.com/prettier/vim-prettier
+[submodule "bundle/Nvim-R"]
+    path = bundle/Nvim-R
+    url = https://github.com/jalvesaq/Nvim-R
