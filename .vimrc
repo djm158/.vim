@@ -9,13 +9,12 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/csapprox'
-Plug 'prettier/vim-prettier'
 Plug 'jalvesaq/Nvim-R'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -59,22 +58,6 @@ set smartindent
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-"syntastic defaults
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:cpp_class_scope_highlight = 1
-let g:cpp_experimental_template_highlight = 1
-let g:syntastic_cpp_compiler_options = ' -std=c++11 stdlib=libc++'
-let g:syntastic_disabled_filetypes=['sh', 'bash', 'shell']
-let g:syntastic_quiet_messages = { 'regex': 'SC2086\|SC2140\|SC2087' }
-let g:syntastic_python_python_exec = '/usr/bin/python3'
-let g:syntastic_loc_list_height = 3
 let g:NERDSpaceDelims = 1 "add space before comments
 let R_assign = 0
 
