@@ -1,25 +1,23 @@
 "required for Vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'rust-lang/rust.vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'godlygeek/csapprox'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'prettier/vim-prettier'
-Plugin 'jalvesaq/Nvim-R'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+
+Plug 'gmarik/Vundle.vim'
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-fugitive'
+Plug 'flazz/vim-colorschemes'
+Plug 'godlygeek/csapprox'
+Plug 'prettier/vim-prettier'
+Plug 'jalvesaq/Nvim-R'
+
+call plug#end()
 
 "custom keymappings
 "easier escape
