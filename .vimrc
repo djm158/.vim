@@ -14,6 +14,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/csapprox'
 Plug 'jalvesaq/Nvim-R'
 Plug 'w0rp/ale'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
@@ -44,8 +48,9 @@ colorscheme gruvbox
 set number
 
 "tab sizing set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set smarttab
 set expandtab
 set autoindent
