@@ -20,6 +20,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'rstacruz/vim-closer'
+Plug 'prettier/vim-prettier'
 
 call plug#end()
 
@@ -80,3 +81,10 @@ set term=screen-256color
 "https://github.com/Valloric/YouCompleteMe/issues/1841
 autocmd BufEnter *.tsx set filetype=typescript
 
+let g:gruvbox_italic=1
+
+"enable italic comments
+"https://sookocheff.com/post/vim/italics/
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
