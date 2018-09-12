@@ -15,3 +15,13 @@ $ chmod +x install.sh
 $ ./install.sh
 ```
 
+## for typescript
+
+add the binary path to node modules in `~/.profile`:
+
+`PATH=~/.npm-global/bin:$PATH`
+
+```sh
+$ npm install -g typescript
+```
+
