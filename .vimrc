@@ -1,6 +1,7 @@
 "required for Vundle
 set nocompatible
 filetype off
+set termguicolors
 
 call plug#begin('~/.vim/plugged')
 
@@ -15,12 +16,14 @@ Plug 'godlygeek/csapprox'
 Plug 'jalvesaq/Nvim-R'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'rstacruz/vim-closer'
 Plug 'prettier/vim-prettier'
+" Plug 'lucasecdb/vim-tsx'
 
 call plug#end()
 
@@ -79,7 +82,7 @@ set term=screen-256color
 
 "tsx -> ts
 "https://github.com/Valloric/YouCompleteMe/issues/1841
-autocmd BufEnter *.tsx set filetype=typescript
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 let g:gruvbox_italic=1
 
@@ -87,4 +90,10 @@ let g:gruvbox_italic=1
 "https://sookocheff.com/post/vim/italics/
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
+
 highlight Comment cterm=italic
+
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
