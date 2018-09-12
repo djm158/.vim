@@ -18,6 +18,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'rstacruz/vim-closer'
 
 call plug#end()
 
@@ -73,4 +75,8 @@ autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType r setlocal ts=2 sts=2 sw=2
 
 set term=screen-256color
-set t_ut=
+
+"tsx -> ts
+"https://github.com/Valloric/YouCompleteMe/issues/1841
+autocmd BufEnter *.tsx set filetype=typescript
+
