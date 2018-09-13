@@ -106,6 +106,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " i don't think the color works here, but this makes tsx attributes italic
 hi tsxAttrib guifg=#F8BD7F cterm=italic
 
-" ALE quicker navigation
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" bug in vim 1453 -- need to wait for ubuntu to update
+" https://github.com/w0rp/ale/issues/1334
+let g:ale_echo_cursor = 0
+
+" ctags
+set tags=tags
