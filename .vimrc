@@ -45,6 +45,9 @@ syntax on
 "necessary for 256 colorscheme
 set t_Co=256           
 
+" recommended that this goes before `colorscheme gruvbox`
+let g:gruvbox_italic=1
+
 "colorscheme
 set background=dark
 colorscheme gruvbox
@@ -64,11 +67,17 @@ set smartindent
 
 "nnoremap <space> za
 
-"emmet settings
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
 let g:NERDSpaceDelims = 1 "add space before comments
+" Add spaces after comment delimiters by default
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+"
+" Align line-wise comment delimiters flush left instead of following code
+" indentation
+let g:NERDDefaultAlign = 'left'
+
+" R config
 let R_assign = 0
 
 "autocompletion features
@@ -81,10 +90,7 @@ autocmd FileType r setlocal ts=2 sts=2 sw=2
 set term=screen-256color
 
 "tsx -> ts
-"https://github.com/Valloric/YouCompleteMe/issues/1841
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-
-let g:gruvbox_italic=1
 
 "enable italic comments
 "https://sookocheff.com/post/vim/italics/
@@ -99,3 +105,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " i don't think the color works here, but this makes tsx attributes italic
 hi tsxAttrib guifg=#F8BD7F cterm=italic
+
+" ALE quicker navigation
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
