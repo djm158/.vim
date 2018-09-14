@@ -111,4 +111,7 @@ hi tsxAttrib guifg=#F8BD7F cterm=italic
 let g:ale_echo_cursor = 0
 
 " ctags
-set tags=tags
+set tags=./tags,tags;$HOME
+
+" map f3 to paste toggle
+set pastetoggle=<F3>
