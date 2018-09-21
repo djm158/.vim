@@ -1,4 +1,3 @@
-"required for Vundle
 set nocompatible
 filetype off
 set termguicolors
@@ -13,7 +12,6 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'kchmck/vim-coffee-script'
@@ -24,7 +22,6 @@ Plug 'davidyorr/vim-es6-unused-imports'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }               "FZF, the GOAT fuzzy searcher
 Plug 'junegunn/fzf.vim'                                                         "FZF, the GOAT fuzzy searcher
 Plug 'airblade/vim-gitgutter'
-" Plug 'lucasecdb/vim-tsx'
 
 call plug#end()
 
@@ -50,7 +47,9 @@ set ignorecase
 set t_Co=256           
 
 " recommended that this goes before `colorscheme gruvbox`
+let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic=1
+let g:gruvbox_italicize_strings = 1
 
 "colorscheme
 set background=dark
@@ -81,11 +80,8 @@ let g:NERDCompactSexyComs = 1
 " indentation
 let g:NERDDefaultAlign = 'left'
 
-" R config
-let R_assign = 0
-
 "autocompletion features
-set completeopt=longest,menuone
+" set completeopt=longest,menuone
 
 "set html spaces to 2
 autocmd FileType html setlocal ts=2 sts=2 sw=2
@@ -101,6 +97,7 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
+
 highlight Comment cterm=italic
 
 " set Vim-specific sequences for RGB colors
@@ -109,10 +106,13 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " i don't think the color works here, but this makes tsx attributes italic
 hi tsxAttrib guifg=#F8BD7F cterm=italic
+hi tsxAttrib guifg=#F8BD7F gui=italic
 
 " bug in vim 1453 -- need to wait for ubuntu to update
 " https://github.com/w0rp/ale/issues/1334
 let g:ale_echo_cursor = 0
+
+set autochdir
 
 " ctags
 set tags=./tags,tags;$HOME
@@ -169,15 +169,6 @@ let g:prettier#config#trailing_comma = 'none'
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'cli-override'
 
-" search stuff
-if executable('ag')
-    " let g:ackprg = 'ag --vimgrep'
-    let g:ackprg = 'ag --nogroup --nocolor --column'
-endif
-
-"ack
-cnoreabbrev Ack Ack!
-
 " FZF all the CONTENTS of the files in the git repo
 nmap ; :GitGrep<CR>
 nnoremap <Leader>g :GitGrep<Cr>
@@ -190,24 +181,14 @@ command! -bang -nargs=* GitGrep
   \  ),
   \  <bang>0)
 
+" FZF all the CONTENTS fo the files in the current dir
+nnoremap <Leader>a :Ag<CR>
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>,
   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
   \                         : fzf#vim#with_preview('right:50%'),
   \                 <bang>0)
 
-" FZF the files in the current folder
-nnoremap <Leader>a :FZFAdjacent<CR>
-command! FZFAdjacent call s:fzf_neighbouring_files()
-function! s:fzf_neighbouring_files()
-  let command = 'rg --hidden --no-heading --smart-case --fixed-strings --files --maxdepth 1 | sort'
-  let options = fzf#vim#with_preview('right:60%', '?').options
-  call fzf#run({
-        \ 'source': command,
-        \ 'sink':   'e',
-        \ 'options': options,
-        \ 'window':  'enew' })
-endfunction
 
 " gui stuff
 :set guioptions-=r  "remove right-hand scroll bar
