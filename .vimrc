@@ -10,7 +10,7 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -22,6 +22,7 @@ Plug 'davidyorr/vim-es6-unused-imports'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }               "FZF, the GOAT fuzzy searcher
 Plug 'junegunn/fzf.vim'                                                         "FZF, the GOAT fuzzy searcher
 Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -36,9 +37,16 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-filetype plugin indent on
 
+filetype plugin indent on
+set runtimepath+=~/.vim/plugged/YouCompleteMe
 syntax on
+
+" hide open buffers
+set hidden
+
+set nostartofline
+set showmatch
 
 " case insensitive search
 set ignorecase
@@ -121,7 +129,7 @@ set tags=./tags,tags;$HOME
 set pastetoggle=<F3>
 
 " unused imports
-autocmd BufWinEnter *.js,*.jsx,*.ts,*.tsx execute "ES6ImportsHighlight"
+" autocmd BufWinEnter *.js,*.jsx,*.ts,*.tsx execute "ES6ImportsHighlight"
 
 let g:es6_imports_gui_fg_color = 'black'
 let g:es6_imports_gui_bg_color = 'red'
@@ -182,14 +190,42 @@ command! -bang -nargs=* GitGrep
   \  <bang>0)
 
 " FZF all the CONTENTS fo the files in the current dir
-nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>f :Ag<CR>
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>,
   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
   \                         : fzf#vim#with_preview('right:50%'),
   \                 <bang>0)
 
+" FZF all the files in the git repo
+nnoremap <C-p> :GitFiles<CR>
+command! -bang -nargs=? -complete=dir GitFiles
+  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview('right:60%'), <bang>0)
+
+" FZF the files in the current folder
+nnoremap <Leader>a :FZFAdjacent<CR>
+command! FZFAdjacent call s:fzf_neighbouring_files()
+function! s:fzf_neighbouring_files()
+  let current_file =expand("%")
+  let cwd = fnamemodify(current_file, ':p:h')
+  let command = 'ag -g "" -f ' . cwd . ' --depth 0'
+
+  call fzf#run({
+        \ 'source': command,
+        \ 'sink':   'e',
+        \ 'options': '-m -x +s',
+        \ 'window':  'enew' })
+endfunction
 
 " gui stuff
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
+
+"Allows Easymotion to be called with 's'
+nmap s <Plug>(easymotion-s)
+
+let g:airline#extensions#tabline#enabled = 1
+
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-l> :bprevious<CR>
+
