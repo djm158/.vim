@@ -25,3 +25,13 @@ add the binary path to node modules in `~/.profile`:
 $ npm install -g typescript
 ```
 
+## useful shortcuts i use a lot
+
+| shorcut | description |
+| -- | -- |
+| `\ + g` | fuzzy find contents of all git files w/ preview |
+| `ctrl + p` | fuzzy find all git files | 
+| `\ + a` | fuzzy find files in current dir | 
+| `\ + f` | recursive fuzzy find contents files in current dir | 
+| `\ + v` | vsplit |
+| `s` | open easy motion options (normal mode) |
