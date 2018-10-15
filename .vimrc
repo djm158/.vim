@@ -5,7 +5,6 @@ set termguicolors
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
@@ -23,6 +22,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }               
 Plug 'junegunn/fzf.vim'                                                         "FZF, the GOAT fuzzy searcher
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
+Plug 'qpkorr/vim-bufkill'
+Plug 'danro/rename.vim'
 
 call plug#end()
 
@@ -44,7 +45,8 @@ syntax on
 
 " hide open buffers
 set hidden
-
+set noshowmode
+set noruler
 set nostartofline
 set showmatch
 
@@ -90,6 +92,7 @@ let g:NERDDefaultAlign = 'left'
 
 "autocompletion features
 " set completeopt=longest,menuone
+set completeopt-=preview
 
 "set html spaces to 2
 autocmd FileType html setlocal ts=2 sts=2 sw=2
@@ -136,49 +139,9 @@ let g:es6_imports_gui_bg_color = 'red'
 
 " comment this out if not at work
 " TODO: find a more robust solution for this
-let g:prettier#exec_cmd_path = "/usr/bin/prettier"
-
-" max line length that prettier will wrap on
-" Prettier default: 80
-let g:prettier#config#print_width = 80
-
-" number of spaces per indentation level
-" Prettier default: 2
-let g:prettier#config#tab_width = 2
-
-" use tabs over spaces
-" Prettier default: false
-let g:prettier#config#use_tabs = 'false'
-
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'false'
-
-" single quotes over double quotes
-" Prettier default: false
-let g:prettier#config#single_quote = 'true'
-
-" print spaces between brackets
-" Prettier default: true
-let g:prettier#config#bracket_spacing = 'false'
-
-" put > on the last line instead of new line
-" Prettier default: false
-let g:prettier#config#jsx_bracket_same_line = 'false'
-
-" avoid|always
-" Prettier default: avoid
-let g:prettier#config#arrow_parens = 'always'
-
-" none|es5|all
-" Prettier default: none
-let g:prettier#config#trailing_comma = 'none'
-
-" cli-override|file-override|prefer-file
-let g:prettier#config#config_precedence = 'cli-override'
+let g:prettier#exec_cmd_path = "~/bin/prettier"
 
 " FZF all the CONTENTS of the files in the git repo
-nmap ; :GitGrep<CR>
 nnoremap <Leader>g :GitGrep<Cr>
 command! -bang -nargs=* GitGrep
   \ call fzf#vim#ag(<q-args>,
@@ -225,7 +188,14 @@ endfunction
 nmap s <Plug>(easymotion-s)
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-l> :bprevious<CR>
+map <C-n> :bnext<CR>
+map <C-m> :bprevious<CR>
+map <C-c> :BD<cr>
+
+nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>s :split<CR>
+
+set clipboard=unnamedplus
 
