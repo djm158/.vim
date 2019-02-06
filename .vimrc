@@ -69,7 +69,7 @@ colorscheme gruvbox
 "set line numbers visible
 set number
 
-"tab sizing set tabstop=4
+"tab sizing 
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
@@ -78,6 +78,7 @@ set expandtab
 set autoindent
 set smartindent
 
+au FileType python setl sw=2 sts=2 et
 "nnoremap <space> za
 
 let g:NERDSpaceDelims = 1 "add space before comments
@@ -139,7 +140,7 @@ let g:es6_imports_gui_bg_color = 'red'
 
 " comment this out if not at work
 " TODO: find a more robust solution for this
-let g:prettier#exec_cmd_path = "~/bin/prettier"
+let g:prettier#exec_cmd_path = "home/dmcgrath/bin/prettier"
 
 " FZF all the CONTENTS of the files in the git repo
 nnoremap <Leader>g :GitGrep<Cr>
@@ -159,6 +160,9 @@ command! -bang -nargs=* Ag
   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
   \                         : fzf#vim#with_preview('right:50%'),
   \                 <bang>0)
+
+" fzf open buffers
+nnoremap <Leader>e :Buffers<CR>
 
 " FZF all the files in the git repo
 nnoremap <C-p> :GitFiles<CR>
@@ -184,6 +188,8 @@ endfunction
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 
+set hlsearch
+
 "Allows Easymotion to be called with 's'
 nmap s <Plug>(easymotion-s)
 
@@ -199,3 +205,7 @@ nnoremap <Leader>s :split<CR>
 
 set clipboard=unnamedplus
 
+" clear search w/ spacebar
+map <Space> :noh<cr>
+
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
