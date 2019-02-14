@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -54,7 +55,7 @@ set showmatch
 set ignorecase
 
 "necessary for 256 colorscheme
-set t_Co=256           
+set t_Co=256
 
 " recommended that this goes before `colorscheme gruvbox`
 let g:gruvbox_contrast_dark = 'hard'
@@ -69,7 +70,7 @@ colorscheme gruvbox
 "set line numbers visible
 set number
 
-"tab sizing 
+"tab sizing
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
@@ -209,3 +210,11 @@ set clipboard=unnamedplus
 map <Space> :noh<cr>
 
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
+" deal with whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
